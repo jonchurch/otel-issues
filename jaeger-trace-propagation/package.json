@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently 'npm:start:serviceA' 'npm:start:serviceB' 'npm:start:client'",
     "start:serviceA": "node serviceA.js",
     "start:serviceB": "node serviceB.js",
     "start:client": "node client.js"
