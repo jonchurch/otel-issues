@@ -33,4 +33,5 @@ function makeRequest() {
   setTimeout(() => { console.log('Completed.'); }, 5000);
 }
 
-makeRequest();
+console.log('Sleeping 5 seconds before making request to ensure all services are up.');
+setTimeout(makeRequest ,5000);

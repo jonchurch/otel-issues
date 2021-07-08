@@ -40,15 +40,15 @@ function handleRequest(request, response) {
       host: 'localhost',
       port: 8081,
       path: '/',
-    }, (response) => {
+    }, (res) => {
       const body = [];
-      response.on('data', (chunk) => body.push(chunk));
-      response.on('end', () => {
+      res.on('data', (chunk) => body.push(chunk));
+      res.on('end', () => {
         console.log(body.toString());
         span.end();
+        response.end('Done!')
       });
     });
-    response.end('Done!')
   });
 }
 
