@@ -1,0 +1,23 @@
+{
+  "name": "jaeger-trace-propagation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.0.1",
+    "@opentelemetry/exporter-jaeger": "^0.23.0",
+    "@opentelemetry/exporter-zipkin": "^0.23.0",
+    "@opentelemetry/instrumentation": "^0.23.0",
+    "@opentelemetry/instrumentation-http": "^0.23.0",
+    "@opentelemetry/node": "^0.23.0",
+    "@opentelemetry/resources": "^0.23.0",
+    "@opentelemetry/semantic-conventions": "^0.23.0",
+    "@opentelemetry/tracing": "^0.23.0"
+  }
+}
