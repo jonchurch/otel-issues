@@ -22,6 +22,9 @@ function makeRequest() {
       response.on('end', () => {
         console.log(body.toString());
         span.end();
+
+      console.log('Sleeping 5 seconds before shutdown to ensure all records are flushed.');
+      setTimeout(() => { console.log('Completed.'); }, 5000);
       });
     });
   });
@@ -29,8 +32,6 @@ function makeRequest() {
   // The process must live for at least the interval past any traces that
   // must be exported, or some risk being lost if they are recorded after the
   // last export.
-  console.log('Sleeping 5 seconds before shutdown to ensure all records are flushed.');
-  setTimeout(() => { console.log('Completed.'); }, 5000);
 }
 
 console.log('Sleeping 5 seconds before making request to ensure all services are up.');
